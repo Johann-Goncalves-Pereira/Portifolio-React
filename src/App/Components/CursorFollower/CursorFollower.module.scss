@@ -1,0 +1,42 @@
+@use "sass:math" as *;
+.cursor {
+	position: absolute;
+	inset: 0;
+
+	&__follower {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+
+		transform: translate(var(--cursor-posX), var(--cursor-posY));
+	}
+}
+
+.text {
+	// position: absolute;
+	// top: 50%;
+	// left: 50%;
+	// width: 10px;
+	// height: 10px;
+
+	&__individual {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+
+		height: 60px;
+		width: 10px;
+
+		transform-origin: bottom center;
+
+		@for $i from 1 through 100 {
+			&:nth-child(#{$i}) {
+				transform: rotate(calc(var(--copy-length) * #{$i}));
+			}
+		}
+	}
+}
+
+//  200 - 20
+//  100 - x
