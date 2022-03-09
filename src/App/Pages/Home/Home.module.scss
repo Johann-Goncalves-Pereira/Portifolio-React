@@ -1,43 +1,43 @@
 .App {
-  display: flex;
-  place-content: center;
-  height: 100vh;
-  text-align: center;
+	display: flex;
+	place-content: center;
+	height: 100vh;
+	text-align: center;
 
-  &__logo {
-    height: 40vmin;
-    pointer-events: none;
-    animation: App-logo-spin infinite 20s var(--ease-squish-2);
-  }
+	&__logo {
+		height: 40vmin;
+		pointer-events: none;
+		animation: App-logo-spin infinite 20s var(--ease-squish-2);
+	}
 
-  &__header {
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    gap: 2vh;
+	&__header {
+		display: flex;
+		flex-direction: column;
+		place-content: center;
+		gap: 2vh;
 
-    font-size: calc(10px + 2vmin);
-    color: white;
+		font-size: calc(10px + 2vmin);
+		color: white;
 
-    p {
-      font-size: var(--font-size-fluid-1);
-    }
+		p {
+			font-size: var(--font-size-fluid-1);
+		}
 
-    img {
-      margin-bottom: 3rem;
-    }
-  }
+		img {
+			margin-bottom: 3rem;
+		}
+	}
 
-  &__link {
-    color: #61dafb;
-  }
+	&__link {
+		color: #61dafb;
+	}
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
