@@ -10,7 +10,9 @@
   "dependencies": {
     "open-props": "^1.3.9",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
@@ -25,8 +27,10 @@
     "postcss-cli": "^9.1.0",
     "postcss-color-alpha": "^2.0.0",
     "postcss-css-variables": "^0.18.0",
+    "postcss-custom-media": "^8.0.0",
     "postcss-custom-selectors": "^6.0.0",
     "postcss-inline-svg": "^5.0.0",
+    "postcss-jit-props": "^1.0.4",
     "postcss-load-config": "^3.1.3",
     "postcss-plugin": "^1.0.0",
     "postcss-plugins": "^1.13.1",
