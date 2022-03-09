@@ -1,0 +1,15 @@
+.header {
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 1em 2em;
+
+        a {
+            &:first-child {
+                margin-right: auto;
+            }
+        }
+    }
+}

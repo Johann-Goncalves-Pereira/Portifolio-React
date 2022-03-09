@@ -7,6 +7,7 @@
   &__logo {
     height: 40vmin;
     pointer-events: none;
+    animation: App-logo-spin infinite 20s var(--ease-squish-2);
   }
 
   &__header {
@@ -29,12 +30,6 @@
 
   &__link {
     color: #61dafb;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    &__logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
   }
 }
 
