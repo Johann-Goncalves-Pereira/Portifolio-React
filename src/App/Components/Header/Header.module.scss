@@ -1,15 +1,24 @@
 .header {
-    &__nav {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 
-        padding: 1em 2em;
+		padding: 1em 2em;
 
-        a {
-            &:first-child {
-                margin-right: auto;
-            }
-        }
-    }
+		a {
+			color: var(--brand);
+
+			text-decoration: none;
+			font-weight: 600;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:first-child {
+				margin-right: auto;
+			}
+		}
+	}
 }
