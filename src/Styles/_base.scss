@@ -1,9 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+
+  color: var(--text-1);
+  background-color: var(--surface-1);
+}
+
+#root {
+  min-height: 100vh;
+  height: 100%;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 code {
@@ -11,12 +20,21 @@ code {
 }
 
 button {
+  $space: 1rem;
   border: 0;
   border-radius: var(--radius-2);
-  padding: var(--border-size-3) var(--border-size-5);
+  padding: var(--btm-padding, #{$space * 0.5} #{$space});
 
   color: var(--text-1);
   background-color: var(--brand);
+
+  transition: background-color 300ms var(--ease-elastic-1);
+  cursor: pointer;
+
+  &:hover,
+  &:focus-within {
+    background-color: var(--pink-8);
+  }
 }
 
 :root {
@@ -29,4 +47,70 @@ button {
   --surface-2: var(--gray-8);
   --surface-3: var(--gray-7);
   --surface-4: var(--gray-6);
+
+  // @media (prefers-color-scheme: light) {
+  //   --text-1: var(--gray-9);
+  //   --text-2: var(--gray-8);
+
+  //   --surface-1: var(--gray-1);
+  //   --surface-2: var(--gray-2);
+  //   --surface-3: var(--gray-3);
+  //   --surface-4: var(--gray-4);
+  // }
 }
+
+// (prefers-reduced-motion: no-preference);
+// (prefers-reduced-motion: reduce);
+// (prefers-reduced-transparency: no-preference);
+// (prefers-reduced-transparency: reduce);
+// (prefers-reduced-data: no-preference);
+// (prefers-reduced-data: reduce);
+
+// (prefers-color-scheme: dark);
+// (prefers-color-scheme: light);
+
+// (prefers-contrast: more);
+// (prefers-contrast: less);
+
+// (orientation: portrait);
+// (orientation: landscape);
+
+// (dynamic-range: high);
+
+// (hover: none) and (pointer: coarse);
+// (hover: none) and (pointer: fine);
+// (hover) and (pointer: coarse);
+// (hover) and (pointer: fine);
+
+// (0px <= width <= 240px);
+// (width >= 240px);
+// (width <= 240px);
+// (--xxs-only) and (--portrait);
+
+// (240px <= width <= 360px);
+// (width >= 360px);
+// (width <= 360px);
+// (--xs-only) and (--portrait);
+
+// (360px <= width <= 480px);
+// (width >= 480px);
+// (width <= 480px);
+// (--sm-only) and (--portrait);
+
+// (480px <= width <= 768px);
+// (width >= 768px);
+// (width <= 768px);
+// (--md-only) and (--portrait);
+
+// (768px <= width <= 1024px);
+// (width >= 1024px);
+// (width <= 1024px);
+// (--lg-only) and (--portrait);
+
+// (1024px <= width <= 1440px);
+// (width >= 1440px);
+// (width <= 1440px);
+
+// (1440px <= width <= 1920px);
+// (width >= 1920px);
+// (width <= 1920px);

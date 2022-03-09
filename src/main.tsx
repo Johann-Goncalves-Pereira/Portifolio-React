@@ -4,11 +4,13 @@ import App from "./App/App";
 
 //& Base Styles, all pages;
 import "./Styles/_base.scss";
-import "./Styles/_open-props.css";
+import "./Styles/_imports.css";
+
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  rootElement
 );

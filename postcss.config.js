@@ -9,8 +9,12 @@ module.exports = {
       preset: "cssnano-preset-default",
     },
     "postcss-color-alpha": {},
+    "postcss-custom-media": {},
     "postcss-custom-selectors": {},
     "postcss-inline-svg": {},
+    "postcss-jit-props": {
+      "open-props": {},
+    },
     "postcss-plugin": {},
     "postcss-preset-env": {},
     "postcss-utilities": {},
