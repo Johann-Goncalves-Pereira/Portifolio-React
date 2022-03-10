@@ -9,7 +9,6 @@ import "./Styles/_imports.css";
 const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  
   <React.StrictMode>
     <App />
   </React.StrictMode>,
