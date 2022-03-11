@@ -39,16 +39,14 @@ class Cursor extends Component {
     const { mouseX, mouseY, trailingX, trailingY } = this.state;
     const diffX = mouseX - trailingX;
     const diffY = mouseY - trailingY;
-    //  Number in expression is coeficient of the delay. 10 for example. You can play with it.
     this.setState(
       {
         trailingX: trailingX + diffX / 10,
         trailingY: trailingY + diffY / 10,
       },
       () => {
-        // Using refs and transform for better performance.
-        this.cursor.current.style.transform = `translate3d(min(${mouseX}px, 100vw - 100%), min(${mouseY}px, 100vh - 100%), 0)`;
-        this.cursorTrailing.current.style.transform = `translate3d(min(${trailingX}px, 100vw - 100%), min(${trailingY}px, 100vh - 100%), 0)`;
+        this.cursor.current.style.transform = `translate3d(clamp(0px + 50%, ${mouseX}px, 100vw - 100%), clamp(0px + 50%, ${mouseY}px, 100vh - 100%), 0)`;
+        this.cursorTrailing.current.style.transform = `translate3d(clamp(0px + 50%, ${trailingX}px, 100vw - 100%), clamp(0px + 50%,${trailingY}px, 100vh - 100%), 0)`;
         this.animationFrame = requestAnimationFrame(this.moveCursor);
       }
     );
