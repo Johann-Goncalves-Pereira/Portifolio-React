@@ -1,10 +1,6 @@
-import React, { Component, CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import styles from "./CursorFollower.module.scss";
-
-type Cursor = {
-  posX: number;
-  posY: number;
-};
+import { useEffect, useState } from "react";
 
 export interface MyCustomCSS extends CSSProperties {
   "--copy-length": string;
@@ -12,10 +8,34 @@ export interface MyCustomCSS extends CSSProperties {
   "--c-posY": string;
 }
 
-const Cursor: React.FC<Cursor> = (props) => {
+const Cursor = () => {
+  const [x, setX] = useState();
+  const [y, setY] = useState();
+  const [delayX, setDelayX] = useState();
+  const [delayY, setDelayY] = useState();
+
+  useEffect(() => {
+    const update = (e: any) => {
+      setX(e.x);
+      setY(e.y);
+      setDelayX(e.delayX);
+      setDelayX(e.delayY);
+    };
+    window.addEventListener("mousemove", update);
+    window.addEventListener("touchmove", update);
+
+    return () => {
+      window.removeEventListener("mousemove", update);
+      window.removeEventListener("touchmove", update);
+    };
+  }, [setX, setY, setDelayX, setDelayY]);
+
+  console.log(x, y);
+  console.log(delayX, delayY);
+
   const cursorStyle = {
-    "--c-posX": `${props.posX - 5}px`,
-    "--c-posY": `${props.posY - 5}px`,
+    "--c-posX": `${x}px`,
+    "--c-posY": `${y}px`,
   } as MyCustomCSS;
 
   return (

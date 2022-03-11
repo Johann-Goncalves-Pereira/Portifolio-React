@@ -1,12 +1,12 @@
 @use "sass:math" as *;
 .cursor {
 	$size: 10px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 
 	&__follower {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 
@@ -23,16 +23,16 @@
 		transition-property: transform;
 
 		&:first-child {
-			transition-duration: 150ms;
+			--fbc: var(--pink-7);
+			// transition-duration: 150ms;
 		}
 
-		&:nth-child(2) {
-			--fbc: var(--pink-6);
-			transition-duration: 100ms;
-		}
-		&:nth-child(3) {
-			--fbc: var(--pink-7);
-		}
+		// &:nth-child(2) {
+		// 	--fbc: var(--pink-6);
+		// 	transition-duration: 100ms;
+		// }
+		// &:nth-child(3) {
+		// }
 	}
 }
 

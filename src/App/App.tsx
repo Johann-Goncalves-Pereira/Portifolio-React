@@ -9,26 +9,12 @@ import Home from "./Pages/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
-  const [x, setX] = useState();
-  const [y, setY] = useState();
-
-  useEffect(() => {
-    const update = (e: any) => {
-      setX(e.x);
-      setY(e.y);
-    };
-    window.addEventListener("mousemove", update);
-    window.addEventListener("touchmove", update);
-    return () => {
-      window.removeEventListener("mousemove", update);
-      window.removeEventListener("touchmove", update);
-    };
-  }, [setX, setY]);
+ 
 
   return (
     <BrowserRouter>
       <Header />
-      <Cursor posX={x} posY={y} />
+      <Cursor />
 
       <Routes>
         <Route path="/" element={<Home />} />
