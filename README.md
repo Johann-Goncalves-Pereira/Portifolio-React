@@ -2,6 +2,10 @@
 
 I don't know what this project will become, but I'm will practice my react skills in this project.
 
+# Tools
+
+React.js, Vite, Sass, PostCss, Git e Typescript.
+
 
 The lasts steps was add the open-props and the postcss plugins.
 
