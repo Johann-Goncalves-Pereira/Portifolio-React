@@ -1,3 +1,6 @@
+I don't know what this project will become, but I'm will practice my react skills in this project.
+
+
 The lasts steps was add the open-props and the postcss plugins.
 
 ## Running the project
