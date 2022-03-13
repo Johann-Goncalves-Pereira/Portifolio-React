@@ -45,8 +45,8 @@ class Cursor extends Component {
         trailingY: trailingY + diffY / 10,
       },
       () => {
-        this.cursor.current.style.transform = `translate3d(clamp(0px + 50%, ${mouseX}px, 100vw - 100%), clamp(0px + 50%, ${mouseY}px, 100vh - 100%), 0)`;
-        this.cursorTrailing.current.style.transform = `translate3d(clamp(0px + 50%, ${trailingX}px, 100vw - 100%), clamp(0px + 50%,${trailingY}px, 100vh - 100%), 0)`;
+        this.cursor.current.style.transform = `translate3d(clamp(0px + 50%, ${mouseX}px, 100vw - 50%), clamp(0px + 50%, ${mouseY}px, 100vh - 50%), 0)`;
+        this.cursorTrailing.current.style.transform = `translate3d(clamp(0px + 50%, ${trailingX}px, 100vw - 50%), clamp(0px + 50%,${trailingY}px, 100vh - 50%), 0)`;
         this.animationFrame = requestAnimationFrame(this.moveCursor);
       }
     );
